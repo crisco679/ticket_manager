@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="ticketManager">
+  <head>
+    <meta charset="utf-8">
+    <title>Ticket Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="views/styles.css">
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
+  </head>
+  <body class="container-fluid" ng-controller="ticketController as ticket">
+    <h1>Ticket Management</h1>
+    <!--  <form novalidate>
+        Name: <input type="text" ng-model="cat.name" /><br />
+        <input type="submit" ng-click="add(cat)" value="Save"/>
+      </form> -->
+      <!-- <li ng-repeat="cat in cats">{{cat.name}}</li> -->
+<form novalidate>
+  <div class="row">
+    <div class="col-md-8">Name: <input type="text" ng-model="ticket.ticketName"></div>
+    <div class="col-md-8">Type: <input type="text" ng-model="ticket.ticketType"></div>
+    <div class="col-md-8">Priority: <input type="text" ng-model="ticket.ticketPriority"></div>
+    <div class="col-md-8">Description: <input type="text" ng-model="ticket.ticketDescription"></div>
+    <div class="col-md-8">Assignee: <input type="text" ng-model="ticket.ticketAssignee"></div>
+    <div class="col-md-8">Reporter: <input type="text" ng-model="ticket.ticketReporter"></div>
+  </div>
+  <div><input type="submit" ng-click="addTicket(ticket)" value="Save"/></div>
+</form>
+  <ul>
+    <li ng-repeat="ticket in tickets">{{ticket.ticketName}}</li>
+  </ul>
+  <div class="well">Well here</div>
+  <div class="well">Well here</div>
+  <div class="well">Well here</div>
+  </body>
+</html>
