@@ -21,3 +21,11 @@ hr {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+.well{
+  width: 30%;
+  display: -webkit-inline-box;
+  margin: 10px;
+}
+.row{
+  display: block;
+}
