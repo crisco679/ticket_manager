@@ -20,7 +20,7 @@ var router = express.Router();
 /////////////////////////////////////////////////////////////
 
 router.post('/store', function(request, response){
-  var tickets = new model({
+  var t = new model({
     ticketName: request.body.ticketName,
     ticketType: request.body.ticketType,
     ticketPriority: request.body.ticketPriority,
@@ -30,14 +30,8 @@ router.post('/store', function(request, response){
     dateCreated: request.body.dateCreated,
     dateUpdated: request.body.dateUpdated,
   });
-  tickets.save(function(err){
-    if(err){
-      console.log('error', err);
-    }
-    response.send(tickets.toJSON());
-
+  t.save()
   });
-});
 router.get('/tickets', function(request, response){
   return model.find({}).exec(function(err,tickets){
     if(err){

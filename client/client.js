@@ -14,7 +14,8 @@ app.controller('ticketController', ["$scope","$http", function($scope, $http){
     })
   };
   $scope.addTicket = function(ticket){
+    console.log("add ticket function", ticket);
     return $http.post('/store', ticket).then(fetchTickets());
   };
-  fetchTickets();
+   fetchTickets();
 }]);
